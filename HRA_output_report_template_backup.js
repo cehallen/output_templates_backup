@@ -5,6 +5,10 @@ function(row) {
     
     
     var ids = {
+        // // these two wait for feed to check correct names
+        // 'assessment_id': 'checklist.member.assessment_id',
+        // 'policy_number': 'checklist.member.policy_number',
+
         '866101': 'hra_questions.language.difficulty_understanding',
         '866102': 'hra_questions.language.difficulty_understanding_explanation',
         '866103': 'hra_questions.language.primary_language',
