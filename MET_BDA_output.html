@@ -5,6 +5,9 @@
     .answer {
         font-weight: bold;
     }
+    .indent-sm {
+        padding-left: 20px;
+    }
 </style>
 
 <h1>Baseline Information</h1>
@@ -22,3 +25,52 @@
 <p>Do you (Insured) have a Government issued form of Identification with a picture?: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
 
 <p>No, Gov't Issued ID not shown.  Explain why not: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
+
+<p>What form of ID did the insured use to confirm identity? <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.has_govt_issued_ID_yes_type}}</span></p>
+
+<!--Conditional 'other' case-->
+{{#if rows.[0].baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}
+    <p class="indent-sm">Other ID type: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}</span></p>
+{{/if}}
+
+<p>Was the ID a picture ID? <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.ID_has_picture}}</span></p>
+
+<!--Conditional 'other/explain/specify' case-->
+{{#if rows.[0].baseline_information.baseline_information.ID_has_picture_no_explain}}
+    <p class="indent-sm">Why not? <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.ID_has_picture_no_explain}}</span></p>
+{{/if}}
+
+<p>With whom do you (Insured) live? <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.lives_with}}</span></p>
+
+<!--Conditional 'other/explain/specify' case-->
+{{#if rows.[0].baseline_information.baseline_information.lives_with_other_specify}}
+    <p class="indent-sm">Specify: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.lives_with_other_specify}}</span></p>
+{{/if}}
+
+<p>In what type of residence do you (Insured) live? <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.residence_type}}</span></p>
+
+<!--Conditional 'other/explain/specify' case-->
+{{#if rows.[0].baseline_information.baseline_information.residence_type_other_specify}}
+    <p class="indent-sm">Specify: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.residence_type_other_specify}}</span></p>
+{{/if}}
+
+<p>Have there been any alterations to your home in the past 12 months? <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.home_alterations_past_12_months}}</span></p>
+
+<!--Conditional 'other/explain/specify' case-->
+{{#if rows.[0].baseline_information.baseline_information.home_alterations_past_12_months_explain}}
+    <p class="indent-sm">Specify alteration details: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.home_alterations_past_12_months_explain}}</span></p>
+{{/if}}
+
+<!--check handlebars docs, and after ask Tim here about how to mimic ng-if something === 'someval' functionality in handlebars.  without it, it's hard to output properly-->
+
+<p>qqqqqqqqqqqq <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.aaaaaaaaaaa}}</span></p>
+
+<!--Conditional 'other/explain/specify' case-->
+{{#if rows.[0].baseline_information.baseline_information.aaaaaaaa}}
+    <p class="indent-sm">qqqqqqqqq <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.aaaaaaaa}}</span></p>
+{{/if}}
+
+<!--Test the if statements-->
+<!--{{#if rows.[0].baseline_information.baseline_information.social_security_number}}-->
+<!--    <p class="indent-sm">This SSN should show up, the above line about 'Other ID type should not: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.social_security_number}}</span></p>-->
+<!--{{/if}}-->
