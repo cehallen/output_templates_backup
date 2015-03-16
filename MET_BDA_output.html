@@ -2,11 +2,23 @@
     .pull-right {
     	float: right;
     }
+    .answer {
+        font-weight: bold;
+    }
 </style>
 
 <h1>Baseline Information</h1>
 
-<p>Insured's Name: <span class="pull-right">{{rows.[0].baseline_information.baseline_information.first_name}} {{rows.[0].baseline_information.baseline_information.last_name}}</span></p>
+<p>Insured's Name: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.first_name}} {{rows.[0].baseline_information.baseline_information.last_name}}</span></p>
 
-<p>Insured's Social Security Number: <span class="pull-right">{{rows.[0].baseline_information.baseline_information.social_security_number}}</span></p>
+<p>Insured's Social Security Number: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.social_security_number}}</span></p>
 
+<p>Insured's Date of Birth: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.dob}}</span></p>
+
+<p>Insured's Gender: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.gender}}</span></p>
+
+<p>Insured's Marital Status: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.marital_status}}</span></p>
+
+<p>Do you (Insured) have a Government issued form of Identification with a picture?: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
+
+<p>No, Gov't Issued ID not shown.  Explain why not: <span class="pull-right answer">{{rows.[0].baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
