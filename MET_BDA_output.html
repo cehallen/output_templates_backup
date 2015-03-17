@@ -2,6 +2,9 @@
     .wrapper {
         padding: 5px 0;
     }
+    .sub-wrap {
+
+    }
     .question {
         display: inline-block;
         width:50%;
@@ -15,7 +18,10 @@
         font-weight: bold;
     }
     .indent-sm {
-        padding-left: 20px;
+        padding-left: 15px;
+    }
+    .indent-md {
+        padding-left: 30px;
     }
 </style>
 {{#each rows}}
@@ -23,7 +29,7 @@
     <h1>Baseline Information</h1>
 
     <div class="wrapper">
-        <div class="question">Insured's Name: TESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERE</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.last_name}}</div>
+        <div class="question">Insured's Name: </div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.last_name}}</div>
     </div>
 
     <div class="wrapper">
@@ -46,9 +52,11 @@
         <div class="question">Do you (Insured) have a Government issued form of Identification with a picture?:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID}}</div>
     </div>
 
-    <div class="wrapper">
-        <div class="question">No, Gov't Issued ID not shown.  Explain why not:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_no_explain}}</div>
-    </div>
+    {{#if this.baseline_information.baseline_information.has_govt_issued_ID_no_explain}}
+        <div class="wrapper">
+            <div class="question">No, Gov't Issued ID not shown.  Explain why not:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_no_explain}}</div>
+        </div>
+    {{/if}}
 
     <div class="wrapper">
         <div class="question">What form of ID did the insured use to confirm identity?</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type}}</div>
@@ -66,7 +74,7 @@
     
     {{#if this.baseline_information.baseline_information.ID_has_picture_no_explain}}
         <div class="wrapper">
-            <div class="question">Why not?</div><div class="answer">{{this.baseline_information.baseline_information.ID_has_picture_no_explain}}</div>
+            <div class="question indent-sm">Why not?</div><div class="answer">{{this.baseline_information.baseline_information.ID_has_picture_no_explain}}</div>
         </div>
     {{/if}}
 
@@ -76,7 +84,7 @@
 
     {{#if this.baseline_information.baseline_information.lives_with_other_specify}}
         <div class="wrapper">
-            <div class="question">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.lives_with_other_specify}}</div>
+            <div class="question indent-sm">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.lives_with_other_specify}}</div>
         </div>
     {{/if}}
 
@@ -86,7 +94,7 @@
 
     {{#if this.baseline_information.baseline_information.residence_type_other_specify}}
         <div class="wrapper">
-            <div class="question">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.residence_type_other_specify}}</div>
+            <div class="question indent-sm">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.residence_type_other_specify}}</div>
         </div>
     {{/if}}
 
@@ -96,7 +104,7 @@
 
     {{#if this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}
         <div class="wrapper">
-            <div class="question">Specify alteration details:</div><div class="answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}</div>
+            <div class="question indent-sm">Specify alteration details:</div><div class="answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}</div>
         </div>
     {{/if}}
 
@@ -118,13 +126,13 @@
 
     {{#if this.baseline_information.baseline_information.assessment_performed_location}}
         <div class="wrapper">
-            <div class="question indent-sm">Name & Address of where interview took place:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_location}}</div>
+            <div class="question">Name & Address of where interview took place:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_location}}</div>
         </div>
     {{/if}}
     
     {{#if this.baseline_information.baseline_information.assessment_not_at_residence_reason}}
         <div class="wrapper">
-            <div class="question indent-sm">Reason interview was not done in Insured's residence:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_not_at_residence_reason}}</div>
+            <div class="question">Reason interview was not done in Insured's residence:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_not_at_residence_reason}}</div>
         </div>
     {{/if}}
 
@@ -135,12 +143,6 @@
     <div class="wrapper">
         <div class="question">Do you (Insured) have a General Power of Attorney or Legal Guardian?</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.has_poa_guardian}}</div>
     </div>
-
-    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}
-        <div class="wrapper">
-            <div class="question indent-sm">Provide Name(s), and contact information:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
-        </div>
-    {{/if}}
 
     {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}
         <div class="wrapper">
@@ -178,19 +180,61 @@
         </div>
     {{/if}}
 
+    <div class="wrapper">
+        <div class="question">Do you (Insured) have any visual problems that I should be aware of in order to ensure that the interview goes smoothly? </div><div class="answer">{{this.general_questions.visual_details.visual_problems}}</div>
+    </div>
+
+    {{#if this.general_questions.visual_details.visual_problem_wears_glasses}}
+        <div class="wrapper">
+            <div class="question indent-sm">Wears glasses</div><div class="answer">{{this.general_questions.visual_details.visual_problem_wears_glasses}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.visual_details.visual_problem_legally_blind}}
+        <div class="wrapper">
+            <div class="question indent-sm">Legally blind</div><div class="answer">{{this.general_questions.visual_details.visual_problem_legally_blind}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.visual_details.legally_blind_onset}}
+        <div class="wrapper">
+            <div class="question indent-md">Date of onset:</div><div class="answer">{{this.general_questions.visual_details.legally_blind_onset}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.visual_details.visual_problem_blind}}
+        <div class="wrapper">
+            <div class="question indent-sm">Blind</div><div class="answer">{{this.general_questions.visual_details.visual_problem_blind}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.visual_details.visual_problem_other}}
+        <div class="wrapper">
+            <div class="question indent-sm">Other</div><div class="answer">{{this.general_questions.visual_details.visual_problem_other}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.visual_details.visual_problem_other_specify}}
+        <div class="wrapper">
+            <div class="question indent-md">Specify:</div><div class="answer">{{this.general_questions.visual_details.visual_problem_other_specify}}</div>
+        </div>
+    {{/if}}
+
+
+
     
 
 
 {{/each}}
     
-    {{#if this.general_questions.power_of_attorney_guardianship.aaaaaaaaaa}}
+    {{#if this.general_questions.visual_details.aaaaaaaaaa}}
         <div class="wrapper">
-            <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.aaaaaaaaaa}}</div>
+            <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.visual_details.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.visual_details.aaaaaaaaaa}}</div>
     </div>
 
     
