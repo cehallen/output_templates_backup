@@ -128,17 +128,69 @@
         </div>
     {{/if}}
 
+
     
-
-{{/each}}
-
+    <h1>General Questions</h1>
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+        <div class="question">Do you (Insured) have a General Power of Attorney or Legal Guardian?</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.has_poa_guardian}}</div>
     </div>
 
-    {{#if this.baseline_information.baseline_information.aaaaaaaaaa}}
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}
         <div class="wrapper">
-            <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+            <div class="question indent-sm">Provide Name(s), and contact information:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
         </div>
     {{/if}}
+
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}
+        <div class="wrapper">
+            <div class="question indent-sm">Name <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}
+        <div class="wrapper">
+            <div class="question indent-sm">Phone <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}
+        <div class="wrapper">
+            <div class="question indent-sm">Address <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_secondary}}
+        <div class="wrapper">
+            <div class="question indent-sm">Name <i>(Secondary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_secondary}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_secondary}}
+        <div class="wrapper">
+            <div class="question indent-sm">Phone <i>(Secondary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_secondary}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_address_secondary}}
+        <div class="wrapper">
+            <div class="question indent-sm">Address <i>(Secondary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_secondary}}</div>
+        </div>
+    {{/if}}
+
+    
+
+
+{{/each}}
+    
+    {{#if this.general_questions.power_of_attorney_guardianship.aaaaaaaaaa}}
+        <div class="wrapper">
+            <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.aaaaaaaaaa}}</div>
+        </div>
+    {{/if}}
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.aaaaaaaaaa}}</div>
+    </div>
+
+    
