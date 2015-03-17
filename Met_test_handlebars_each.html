@@ -1,8 +1,14 @@
 <style type="text/css">
-    .pull-right {
-    	float: right;
+    .question {
+        display: inline-block;
+        width:48%;
+        vertical-align: top;
     }
     .answer {
+        padding-left: 4%;
+        display: inline-block;
+        width:48%;
+        vertical-align: top;
         font-weight: bold;
     }
     .indent-sm {
@@ -13,66 +19,136 @@
 
     <h1>Baseline Information</h1>
 
-    <p>Insured's Name: <span class="pull-right answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.last_name}}</span></p>
+    <div class="wrapper">
+        <div class="question">Insured's Name: TESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERETESTING A REALLY LONG QUESTION HERE</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.last_name}}</div>
+    </div>
 
-    <p>Insured's Social Security Number: <span class="pull-right answer">{{this.baseline_information.baseline_information.social_security_number}}</span></p>
+    <p><span class="question">Insured's Social Security Number:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.social_security_number}}</span></p>
 
-    <p>Insured's Date of Birth: <span class="pull-right answer">{{this.baseline_information.baseline_information.dob}}</span></p>
+    <div class="wrapper">
+        <div class="question">Insured's Social Security Number:</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.social_security_number}}</div>
+    </div>
 
-    <p>Insured's Gender: <span class="pull-right answer">{{this.baseline_information.baseline_information.gender}}</span></p>
+    <p><span class="question">Insured's Date of Birth:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.dob}}</span></p>
 
-    <p>Insured's Marital Status: <span class="pull-right answer">{{this.baseline_information.baseline_information.marital_status}}</span></p>
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
-    <p>Do you (Insured) have a Government issued form of Identification with a picture?: <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
+    <p><span class="question">Insured's Gender:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.gender}}</span></p>
 
-    <p>No, Gov't Issued ID not shown.  Explain why not: <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
-    <p>What form of ID did the insured use to confirm identity? <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type}}</span></p>
+    <p><span class="question">Insured's Marital Status:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.marital_status}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">Do you (Insured) have a Government issued form of Identification with a picture?:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">No, Gov't Issued ID not shown.  Explain why not:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">What form of ID did the insured use to confirm identity?</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
     <!--Conditional 'other' case-->
     {{#if this.baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}
-        <p class="indent-sm">Other ID type: <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}</span></p>
+        <p class="indent-sm"><span>Other ID type:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}</span></p>
     {{/if}}
 
-    <p>Was the ID a picture ID? <span class="pull-right answer">{{this.baseline_information.baseline_information.ID_has_picture}}</span></p>
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">Was the ID a picture ID?</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.ID_has_picture}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
     <!--Conditional 'other/explain/specify' case-->
     {{#if this.baseline_information.baseline_information.ID_has_picture_no_explain}}
-        <p class="indent-sm">Why not? <span class="pull-right answer">{{this.baseline_information.baseline_information.ID_has_picture_no_explain}}</span></p>
+        <p class="indent-sm"><span>Why not?</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.ID_has_picture_no_explain}}</span></p>
     {{/if}}
 
-    <p>With whom do you (Insured) live? <span class="pull-right answer">{{this.baseline_information.baseline_information.lives_with}}</span></p>
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">With whom do you (Insured) live?</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.lives_with}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
     <!--Conditional 'other/explain/specify' case-->
     {{#if this.baseline_information.baseline_information.lives_with_other_specify}}
-        <p class="indent-sm">Specify: <span class="pull-right answer">{{this.baseline_information.baseline_information.lives_with_other_specify}}</span></p>
+        <p class="indent-sm"><span>Specify:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.lives_with_other_specify}}</span></p>
     {{/if}}
 
-    <p>In what type of residence do you (Insured) live? <span class="pull-right answer">{{this.baseline_information.baseline_information.residence_type}}</span></p>
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">In what type of residence do you (Insured) live?</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.residence_type}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
     <!--Conditional 'other/explain/specify' case-->
     {{#if this.baseline_information.baseline_information.residence_type_other_specify}}
-        <p class="indent-sm">Specify: <span class="pull-right answer">{{this.baseline_information.baseline_information.residence_type_other_specify}}</span></p>
+        <p class="indent-sm"><span>Specify:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.residence_type_other_specify}}</span></p>
     {{/if}}
 
-    <p>Have there been any alterations to your home in the past 12 months? <span class="pull-right answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months}}</span></p>
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
+    <p><span class="question">Have there been any alterations to your home in the past 12 months?</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months}}</span></p>
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
     <!--Conditional 'other/explain/specify' case-->
     {{#if this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}
-        <p class="indent-sm">Specify alteration details: <span class="pull-right answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}</span></p>
+        <p class="indent-sm"><span>Specify alteration details:</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}</span></p>
     {{/if}}
+
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
 
 
 
 {{/each}}
 
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.baseline_information.baseline_information.first_name}} {{this.baseline_information.baseline_information.aaaaaaaaaa}}</div>
+    </div>
+
     <!--check handlebars docs, and after ask Tim here about how to mimic ng-if something === 'someval' functionality in handlebars.  without it, it's hard to output properly-->
 
-    <p>qqqqqqqqqqqq <span class="pull-right answer">{{this.baseline_information.baseline_information.aaaaaaaaaaa}}</span></p>
+    <p><span class="question">qqqqqqqqqqqq</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.aaaaaaaaaaa}}</span></p>
 
     <!--Conditional 'other/explain/specify' case-->
     {{#if this.baseline_information.baseline_information.aaaaaaaa}}
-        <p class="indent-sm">qqqqqqqqq <span class="pull-right answer">{{this.baseline_information.baseline_information.aaaaaaaa}}</span></p>
+        <p class="indent-sm"><span class="question">qqqqqqqqq</span> <span class="pull-right answer">{{this.baseline_information.baseline_information.aaaaaaaa}}</span></p>
     {{/if}}
 
     <!--Test the if statements-->
