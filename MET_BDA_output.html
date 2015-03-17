@@ -1,27 +1,25 @@
 <style type="text/css">
+    h1 {
+        padding-top: 20px;
+    }
     .wrapper {
-        padding: 5px 0;
+        padding: 10px 0 0 0;
     }
     .wrapper-sub {
-
+        
     }
     .question {
         display: inline-block;
         width:50%;
-        vertical-align: top;
+        vertical-align: bottom;
+        border-bottom: 1px dotted black;
     }
     .answer {
         padding-left: 4%;
         display: inline-block;
         width:46%;
-        vertical-align: top;
+        vertical-align: bottom;
         font-weight: bold;
-    }
-    .indent-sm {
-        padding-left: 15px;
-    }
-    .indent-md {
-        padding-left: 30px;
     }
 </style>
 {{#each rows}}
@@ -56,11 +54,9 @@
         <div class="question">Do you (Insured) have a Government issued form of Identification with a picture?:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID}}</div>
     </div>
 
-    {{#if this.baseline_information.baseline_information.has_govt_issued_ID_no_explain}}
-        <div class="wrapper-sub">
-            <div class="question">No, Gov't Issued ID not shown.  Explain why not:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_no_explain}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper">
+        <div class="question">No, Gov't Issued ID not shown.  Explain why not:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_no_explain}}</div>
+    </div>
 
     <div class="wrapper">
         <div class="question">What form of ID did the insured use to confirm identity?</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type}}</div>
@@ -68,7 +64,7 @@
 
     {{#if this.baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Other ID type:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}</div>
+            <div class="question">Other ID type:</div><div class="answer">{{this.baseline_information.baseline_information.has_govt_issued_ID_yes_type_other}}</div>
         </div>
     {{/if}}
 
@@ -76,69 +72,55 @@
         <div class="question">Was the ID a picture ID?</div><div class="answer">{{this.baseline_information.baseline_information.ID_has_picture}}</div>
     </div>
     
-    {{#if this.baseline_information.baseline_information.ID_has_picture_no_explain}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Why not?</div><div class="answer">{{this.baseline_information.baseline_information.ID_has_picture_no_explain}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question">Why not?</div><div class="answer">{{this.baseline_information.baseline_information.ID_has_picture_no_explain}}</div>
+    </div>
 
     <div class="wrapper">
         <div class="question">With whom do you (Insured) live?</div><div class="answer">{{this.baseline_information.baseline_information.lives_with}}</div>
     </div>
 
-    {{#if this.baseline_information.baseline_information.lives_with_other_specify}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.lives_with_other_specify}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.lives_with_other_specify}}</div>
+    </div>
 
     <div class="wrapper">
         <div class="question">In what type of residence do you (Insured) live?</div><div class="answer">{{this.baseline_information.baseline_information.residence_type}}</div>
     </div>
 
-    {{#if this.baseline_information.baseline_information.residence_type_other_specify}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.residence_type_other_specify}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question">Specify:</div><div class="answer">{{this.baseline_information.baseline_information.residence_type_other_specify}}</div>
+    </div>
 
     <div class="wrapper">
         <div class="question">Have there been any alterations to your home in the past 12 months?</div><div class="answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months}}</div>
     </div>
 
-    {{#if this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Specify alteration details:</div><div class="answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question">Specify alteration details:</div><div class="answer">{{this.baseline_information.baseline_information.home_alterations_past_12_months_explain}}</div>
+    </div>
 
-    {{#if this.baseline_information.baseline_information.facility_name}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Facility Name</div><div class="answer">{{this.baseline_information.baseline_information.facility_name}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper">
+        <div class="question">Facility Name</div><div class="answer">{{this.baseline_information.baseline_information.facility_name}}</div>
+    </div>
+    
+    <div class="wrapper-sub">
+        <div class="question">Facility Address:</div><div class="answer">{{this.baseline_information.baseline_information.facility_address}}</div>
+    </div>
 
-    {{#if this.baseline_information.baseline_information.facility_address}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Facility Address:</div><div class="answer">{{this.baseline_information.baseline_information.facility_address}}</div>
-        </div>
-    {{/if}}
 
     <div class="wrapper">
         <div class="question">INTERVIEWER: Was this interview performed in the insured’s current place of residence?</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_at_current_residence}}</div>
     </div>
 
-    {{#if this.baseline_information.baseline_information.assessment_performed_location}}
-        <div class="wrapper-sub">
-            <div class="question">Name & Address of where interview took place:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_location}}</div>
-        </div>
-    {{/if}}
-    
-    {{#if this.baseline_information.baseline_information.assessment_not_at_residence_reason}}
-        <div class="wrapper-sub">
-            <div class="question">Reason interview was not done in Insured's residence:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_not_at_residence_reason}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question">Name & Address of where interview took place:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_location}}</div>
+    </div>
+
+    <div class="wrapper-sub">
+        <div class="question">Reason interview was not done in Insured's residence:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_not_at_residence_reason}}</div>
+    </div>
+
 
 
     
@@ -150,23 +132,17 @@
         <div class="question">Do you (Insured) have a General Power of Attorney or Legal Guardian?</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.has_poa_guardian}}</div>
     </div>
 
-    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Name <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question indent-sm">Name <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
+    </div>
 
-    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Phone <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question indent-sm">Phone <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}</div>
+    </div>
 
-    {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}
-        <div class="wrapper-sub">
-            <div class="question indent-sm">Address <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}</div>
-        </div>
-    {{/if}}
+    <div class="wrapper-sub">
+        <div class="question indent-sm">Address <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}</div>
+    </div>
 
     {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_secondary}}
         <div class="wrapper-sub">
@@ -190,29 +166,35 @@
         <div class="question">Do you (Insured) have any visual problems that I should be aware of in order to ensure that the interview goes smoothly? </div><div class="answer">{{this.general_questions.visual_details.visual_problems}}</div>
     </div>
 
-    <div class="wrapper-sub">
-        <div class="question indent-sm">Wears glasses</div><div class="answer">{{this.general_questions.visual_details.visual_problem_wears_glasses}}</div>
+    <div class="wrapper">
+        <div class="question">Specify visual problems:</div><div class="answer"></div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question indent-sm">Legally blind</div><div class="answer">{{this.general_questions.visual_details.visual_problem_legally_blind}}</div>
+        <div class="question">Wears glasses</div><div class="answer">{{this.general_questions.visual_details.visual_problem_wears_glasses}}</div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question indent-md">Date of onset:</div><div class="answer">{{this.general_questions.visual_details.legally_blind_onset}}</div>
+        <div class="question">Legally blind</div><div class="answer">{{this.general_questions.visual_details.visual_problem_legally_blind}}</div>
+    </div>
+
+    {{#if this.general_questions.visual_details.legally_blind_onset}}
+        <div class="wrapper-sub">
+            <div class="question">Date of onset:</div><div class="answer">{{this.general_questions.visual_details.legally_blind_onset}}</div>
+        </div>
+    {{/if}}
+
+    <div class="wrapper-sub">
+        <div class="question">Blind</div><div class="answer">{{this.general_questions.visual_details.visual_problem_blind}}</div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question indent-sm">Blind</div><div class="answer">{{this.general_questions.visual_details.visual_problem_blind}}</div>
-    </div>
-
-    <div class="wrapper-sub">
-        <div class="question indent-sm">Other</div><div class="answer">{{this.general_questions.visual_details.visual_problem_other}}</div>
+        <div class="question">Other</div><div class="answer">{{this.general_questions.visual_details.visual_problem_other}}</div>
     </div>
 
     {{#if this.general_questions.visual_details.visual_problem_other_specify}}
         <div class="wrapper-sub">
-            <div class="question indent-md">Specify:</div><div class="answer">{{this.general_questions.visual_details.visual_problem_other_specify}}</div>
+            <div class="question">Specify:</div><div class="answer">{{this.general_questions.visual_details.visual_problem_other_specify}}</div>
         </div>
     {{/if}}
 
@@ -220,46 +202,74 @@
         <div class="question">Do you (Insured) have any hearing problems that I should be aware of in order to ensure that the interview goes smoothly?</div><div class="answer">{{this.general_questions.hearing_details.hearing_problems}}</div>
     </div>
 
-    <div class="wrapper-sub">
-        <div class="question indent-sm">Hearing aid</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_hearing_aid}}</div>
-    </div>
-
-    <div class="wrapper-sub">
-        <div class="question indent-sm">Deaf</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_deaf}}</div>
-    </div>
-
     <div class="wrapper">
+        <div class="question">Specify hearing problems:</div><div class="answer"></div>
+    </div>
+
+    <div class="wrapper-sub">
+        <div class="question">Hearing aid</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_hearing_aid}}</div>
+    </div>
+
+    <div class="wrapper-sub">
+        <div class="question">Deaf</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_deaf}}</div>
+    </div>
+
+    <div class="wrapper-sub">
         <div class="question">Read lips</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_read_lips}}</div>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper-sub">
         <div class="question">Other</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_other}}</div>
     </div>
 
     {{#if this.general_questions.hearing_details.hearing_problem_other_specify}}
-        <div class="wrapper">
-            <div class="question indent-md">Specify:</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_other_specify}}</div>
+        <div class="wrapper-sub">
+            <div class="question">Specify:</div><div class="answer">{{this.general_questions.hearing_details.hearing_problem_other_specify}}</div>
         </div>
     {{/if}}
 
-
-    
-
-
-{{/each}}
+    <div class="wrapper">
+        <div class="question">Do you (Insured) have any speech problems that I should be aware of in order to ensure that the interview goes smoothly?</div><div class="answer">{{this.general_questions.speech_details.speech_problems}}</div>
+    </div>
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.hearing_details.aaaaaaaaaa}}</div>
+        <div class="question">Specify speech problems:</div><div class="answer"></div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.hearing_details.aaaaaaaaaa}}</div>
+        <div class="question">Aphasia</div><div class="answer">{{this.general_questions.speech_details.speech_problem_aphasia}}</div>
     </div>
 
-    {{#if this.general_questions.hearing_details.aaaaaaaaaa}}
-        <div class="wrapper">
-            <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.hearing_details.aaaaaaaaaa}}</div>
+    <div class="wrapper-sub">
+        <div class="question">Other</div><div class="answer">{{this.general_questions.speech_details.speech_problem_other}}</div>
+    </div>
+
+    {{#if this.general_questions.speech_details.speech_problem_other_specify}}
+        <div class="wrapper-sub">
+            <div class="question">Specify:</div><div class="answer">{{this.general_questions.speech_details.speech_problem_other_specify}}</div>
+        </div>
+    {{/if}}
+    
+    <!-- HALFWAY THROUGH SPEECH DETAILS.  YOU ARE SHOWING ALL QUESTIONS NOW, REGARDLESS OF IF ANSWERED but most go up and delete a few/check make sure got them all.  TRY TO KEEP THIS -->
+    <!-- See problem of checked checkboxes and the 'Yes' getting bumped to next line.  Fix the padding CSS -->
+
+
+
+{{/each}}
+<!-- 
+    <div class="wrapper">
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.speech_details.aaaaaaaaaa}}</div>
+    </div>
+
+    <div class="wrapper-sub">
+        <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.speech_details.aaaaaaaaaa}}</div>
+    </div>
+
+    {{#if this.general_questions.speech_details.aaaaaaaaaa}}
+        <div class="wrapper-sub">
+            <div class="question indent-sm">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.speech_details.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
     
+ -->
