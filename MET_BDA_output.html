@@ -4,13 +4,13 @@
     }
     .question {
         display: inline-block;
-        width:48%;
+        width:50%;
         vertical-align: top;
     }
     .answer {
         padding-left: 4%;
         display: inline-block;
-        width:48%;
+        width:46%;
         vertical-align: top;
         font-weight: bold;
     }
@@ -100,6 +100,35 @@
         </div>
     {{/if}}
 
+    {{#if this.baseline_information.baseline_information.facility_name}}
+        <div class="wrapper">
+            <div class="question indent-sm">Facility Name</div><div class="answer">{{this.baseline_information.baseline_information.facility_name}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.baseline_information.baseline_information.facility_address}}
+        <div class="wrapper">
+            <div class="question indent-sm">Facility Address:</div><div class="answer">{{this.baseline_information.baseline_information.facility_address}}</div>
+        </div>
+    {{/if}}
+
+    <div class="wrapper">
+        <div class="question">INTERVIEWER: Was this interview performed in the insured’s current place of residence?</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_at_current_residence}}</div>
+    </div>
+
+    {{#if this.baseline_information.baseline_information.assessment_performed_location}}
+        <div class="wrapper">
+            <div class="question indent-sm">Name & Address of where interview took place:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_performed_location}}</div>
+        </div>
+    {{/if}}
+    
+    {{#if this.baseline_information.baseline_information.assessment_not_at_residence_reason}}
+        <div class="wrapper">
+            <div class="question indent-sm">Reason interview was not done in Insured's residence:</div><div class="answer">{{this.baseline_information.baseline_information.assessment_not_at_residence_reason}}</div>
+        </div>
+    {{/if}}
+
+    
 
 {{/each}}
 
