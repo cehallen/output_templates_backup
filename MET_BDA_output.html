@@ -298,32 +298,44 @@
     {{/if}}
 
     <!-- Handedness -->
-    
+
     <div class="wrapper">
         <div class="question">Are you primarily right or left handed?</div><div class="answer">{{this.general_questions.handedness.handedness}}</div>
     </div>
+
+    <!-- Height and Weight -->
+
+    <div class="wrapper">
+        <div class="question">How tall are you?</div><div class="answer">{{this.general_questions.height_weight.height_ft}}' {{this.general_questions.height_weight.height_in}}"</div>
+    </div>
+
+    <div class="wrapper">
+        <div class="question">How much do you weigh?</div><div class="answer">{{this.general_questions.height_weight.weight_lbs}} lbs</div>
+    </div>
+
+    <!-- Fainting and Falling -->
 
 
 
 {{/each}}
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.handedness.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.handedness.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
     </div>
 
-    {{#if this.general_questions.handedness.aaaaaaaaaa}}
+    {{#if this.general_questions.fainting_falling.aaaaaaaaaa}}
         <div class="wrapper-sub">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.handedness.aaaaaaaaaa}}</div>
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
-    {{#if this.general_questions.handedness.aaaaaaaaaa}}
+    {{#if this.general_questions.fainting_falling.aaaaaaaaaa}}
         <div class="wrapper">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.handedness.aaaaaaaaaa}}</div>
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
