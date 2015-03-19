@@ -337,13 +337,48 @@
         </div>
     {{/if}}
 
-    {{#if this.general_questions.fainting_falling.aaaaaaaaaa}}
-        <div class="wrapper-sub">
-            <div class="question">Explain:</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
+    {{#if this.general_questions.fainting_falling.sustained_injuries_explain}}
+        <div class="wrapper">
+            <div class="question">Explain:</div><div class="answer">{{this.general_questions.fainting_falling.sustained_injuries_explain}}</div>
         </div>
     {{/if}}
 
-    
+    <!-- Claims Benefits -->
+
+    <div class="wrapper">
+        <div class="question">Have you received any Long Term Care claim benefits in the past 5 years? </div><div class="answer">{{this.general_questions.claim_benefits.has_received_long_term_care_benefits_in_past_5_years}}</div>
+    </div>
+
+    {{#if this.general_questions.claim_benefits.aaaaaaaaaa}}
+        <div class="wrapper">
+            <div class="question">When? <i>(Approximately)</i></div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.claim_benefits.when_benefits_received_start}}
+        <div class="wrapper-sub">
+            <div class="question">From:</div><div class="answer">{{this.general_questions.claim_benefits.when_benefits_received_start}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.claim_benefits.when_benefits_received_end}}
+        <div class="wrapper-sub">
+            <div class="question">To:</div><div class="answer">{{this.general_questions.claim_benefits.when_benefits_received_end}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.claim_benefits.why_benefits_received}}
+        <div class="wrapper">
+            <div class="question">Why?</div><div class="answer">{{this.general_questions.claim_benefits.why_benefits_received}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.claim_benefits.where_benefits_received}}
+        <div class="wrapper">
+            <div class="question">Where?</div><div class="answer">{{this.general_questions.claim_benefits.where_benefits_received}}</div>
+        </div>
+    {{/if}}
+
 
 
 {{/each}}
