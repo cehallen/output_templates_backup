@@ -26,7 +26,9 @@
 
 
 
+
     <h1>Baseline Information</h1>
+
 
 
 
@@ -139,7 +141,9 @@
 
 
     
+
     <h1>General Questions</h1>
+
 
 
 
@@ -439,27 +443,82 @@
         </div>
     {{/if}}
 
+    <!-- Car and Driving -->
+
+    <div class="wrapper">
+        <div class="question">Do you currently own a car?</div><div class="answer">{{this.general_questions.car_driving.currently_owns_car}}</div>
+    </div>
+
+    {{#if this.general_questions.car_driving.why_not}}
+        <div class="wrapper">
+            <div class="question">Why not?</div><div class="answer">{{this.general_questions.car_driving.why_not}}</div>
+        </div>
+    {{/if}}
+
+    <div class="wrapper">
+        <div class="question">Do you currently drive yourself?</div><div class="answer">{{this.general_questions.car_driving.currently_drives_self}}</div>
+    </div>
+
+    {{#if this.general_questions.car_driving.how_frequently}}
+        <div class="wrapper">
+            <div class="question">How frequently do you drive?</div><div class="answer">{{this.general_questions.car_driving.how_frequently}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.car_driving.when_stopped}}
+        <div class="wrapper">
+            <div class="question">When did you stop?</div><div class="answer">{{this.general_questions.car_driving.when_stopped}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.car_driving.why_stopped}}
+        <div class="wrapper">
+            <div class="question">Why did you stop?</div><div class="answer">{{this.general_questions.car_driving.why_stopped}}</div>
+        </div>
+    {{/if}}
+
+
+
+
+    <h1>Self Reported Pain</h1>
+
+
+
+    
+    <!-- Current Pain -->
+
+    <div class="wrapper">
+        <div class="question">At this moment, do you have any pain?</div><div class="answer">{{this.self_reported_pain.currently_in_pain.in_pain_now}}</div>
+    </div>
+
+    <!-- Routinely Suffered Pains -->
+
+    <div class="wrapper">
+        <div class="question">Do you routinely have pain? <i>(If Yes, provide details for each area of pain below)</i></div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
+    </div>
+
+    
 
 
 {{/each}}
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
     </div>
 
-    {{#if this.general_questions.pets.aaaaaaaaaa}}
+    {{#if this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}
         <div class="wrapper">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
-    {{#if this.general_questions.pets.aaaaaaaaaa}}
+    {{#if this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}
         <div class="wrapper-sub">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
