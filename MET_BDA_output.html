@@ -349,21 +349,21 @@
         <div class="question">Have you received any Long Term Care claim benefits in the past 5 years? </div><div class="answer">{{this.general_questions.claim_benefits.has_received_long_term_care_benefits_in_past_5_years}}</div>
     </div>
 
-    {{#if this.general_questions.claim_benefits.aaaaaaaaaa}}
+    {{#if this.general_questions.claim_benefits.when_benefits_received_start}}
         <div class="wrapper">
-            <div class="question">When? <i>(Approximately)</i></div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
+            <div class="question">When? <i>(Approximately)</i></div><div class="answer"></div>
         </div>
     {{/if}}
 
     {{#if this.general_questions.claim_benefits.when_benefits_received_start}}
         <div class="wrapper-sub">
-            <div class="question">From:</div><div class="answer">{{this.general_questions.claim_benefits.when_benefits_received_start}}</div>
+            <div class="question">From</div><div class="answer">{{this.general_questions.claim_benefits.when_benefits_received_start}}</div>
         </div>
     {{/if}}
 
     {{#if this.general_questions.claim_benefits.when_benefits_received_end}}
         <div class="wrapper-sub">
-            <div class="question">To:</div><div class="answer">{{this.general_questions.claim_benefits.when_benefits_received_end}}</div>
+            <div class="question">to</div><div class="answer">{{this.general_questions.claim_benefits.when_benefits_received_end}}</div>
         </div>
     {{/if}}
 
@@ -379,27 +379,87 @@
         </div>
     {{/if}}
 
+    <!-- Rehab or Other Facility -->
+
+    <div class="wrapper">
+        <div class="question">Have you had a stay in a rehab or other facility in the past 5 years?</div><div class="answer">{{this.general_questions.rehab_or_other_facility.rehab_or_facility_stay}}</div>
+    </div>
+
+    {{#if this.general_questions.rehab_or_other_facility.when_stay_start}}
+        <div class="wrapper">
+            <div class="question">When? <i>(Approximately)</i></div><div class="answer"></div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.rehab_or_other_facility.when_stay_start}}
+        <div class="wrapper-sub">
+            <div class="question">From</div><div class="answer">{{this.general_questions.rehab_or_other_facility.when_stay_start}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.rehab_or_other_facility.when_stay_end}}
+        <div class="wrapper-sub">
+            <div class="question">to</div><div class="answer">{{this.general_questions.rehab_or_other_facility.when_stay_end}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.rehab_or_other_facility.why_stay}}
+        <div class="wrapper">
+            <div class="question">Why?</div><div class="answer">{{this.general_questions.rehab_or_other_facility.why_stay}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.rehab_or_other_facility.where_stay}}
+        <div class="wrapper">
+            <div class="question">Where?</div><div class="answer">{{this.general_questions.rehab_or_other_facility.where_stay}}</div>
+        </div>
+    {{/if}}
+
+    <!-- Pets -->
+
+    <div class="wrapper">
+        <div class="question">Do you have pets?</div><div class="answer">{{this.general_questions.pets.has_pets}}</div>
+    </div>
+
+    {{#if this.general_questions.pets.number}}
+        <div class="wrapper">
+            <div class="question">How many?</div><div class="answer">{{this.general_questions.pets.number}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.pets.type}}
+        <div class="wrapper">
+            <div class="question">What type?</div><div class="answer">{{this.general_questions.pets.type}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.pets.who_takes_care}}
+        <div class="wrapper">
+            <div class="question">Who takes care of them?</div><div class="answer">{{this.general_questions.pets.who_takes_care}}</div>
+        </div>
+    {{/if}}
+
 
 
 {{/each}}
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
     </div>
 
-    {{#if this.general_questions.claim_benefits.aaaaaaaaaa}}
+    {{#if this.general_questions.pets.aaaaaaaaaa}}
         <div class="wrapper">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
-    {{#if this.general_questions.claim_benefits.aaaaaaaaaa}}
+    {{#if this.general_questions.pets.aaaaaaaaaa}}
         <div class="wrapper-sub">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.pets.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
