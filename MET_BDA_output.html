@@ -110,13 +110,13 @@
 
     {{#if this.baseline_information.baseline_information.facility_name}}
         <div class="wrapper">
-            <div class="question">Facility Name</div><div class="answer">{{this.baseline_information.baseline_information.facility_name}}</div>
+            <div class="question">Facility Name:</div><div class="answer">{{this.baseline_information.baseline_information.facility_name}}</div>
         </div>
     {{/if}}
     
     {{#if this.baseline_information.baseline_information.facility_address}}
         <div class="wrapper">
-            <div class="question">Facility Address</div><div class="answer">{{this.baseline_information.baseline_information.facility_address}}</div>
+            <div class="question">Facility Address:</div><div class="answer">{{this.baseline_information.baseline_information.facility_address}}</div>
         </div>
     {{/if}}
 
@@ -149,37 +149,37 @@
 
     {{#if this.baseline_information.baseline_information.poa_guardian_name_primary}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Name <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
+            <div class="question indent-sm">Name <i>(Primary)</i>:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_primary}}</div>
         </div>
     {{/if}}
 
     {{#if this.baseline_information.baseline_information.poa_guardian_phone_primary}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Phone <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}</div>
+            <div class="question indent-sm">Phone <i>(Primary)</i>:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_primary}}</div>
         </div>
     {{/if}}
 
     {{#if this.baseline_information.baseline_information.poa_guardian_address_primary}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Address <i>(Primary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}</div>
+            <div class="question indent-sm">Address <i>(Primary)</i>:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_primary}}</div>
         </div>
     {{/if}}
 
     {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_name_secondary}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Name <i>(Secondary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_secondary}}</div>
+            <div class="question indent-sm">Name <i>(Secondary)</i>:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_name_secondary}}</div>
         </div>
     {{/if}}
 
     {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_secondary}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Phone <i>(Secondary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_secondary}}</div>
+            <div class="question indent-sm">Phone <i>(Secondary)</i>:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_phone_secondary}}</div>
         </div>
     {{/if}}
 
     {{#if this.general_questions.power_of_attorney_guardianship.poa_guardian_address_secondary}}
         <div class="wrapper-sub">
-            <div class="question indent-sm">Address <i>(Secondary)</i></div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_secondary}}</div>
+            <div class="question indent-sm">Address <i>(Secondary)</i>:</div><div class="answer">{{this.general_questions.power_of_attorney_guardianship.poa_guardian_address_secondary}}</div>
         </div>
     {{/if}}
 
@@ -293,7 +293,7 @@
 
     {{#if this.general_questions.speech_details.communicates_with_other_specify}}
         <div class="wrapper-sub">
-            <div class="question">Specify:handedness</div><div class="answer">{{this.general_questions.speech_details.communicates_with_other_specify}}</div>
+            <div class="question">Specify:</div><div class="answer">{{this.general_questions.speech_details.communicates_with_other_specify}}</div>
         </div>
     {{/if}}
 
@@ -315,28 +315,59 @@
 
     <!-- Fainting and Falling -->
 
+    <div class="wrapper">
+        <div class="question">In the past 6 months, have you had one (1) or more episodes of fainting, falling or dropping down or have you lost your balance or tripped over something that resulted in falling or dropping to the ground? </div><div class="answer">{{this.general_questions.fainting_falling.falling_episode_past_6_months}}</div>
+    </div>
+
+    {{#if this.general_questions.fainting_falling.times}}
+        <div class="wrapper">
+            <div class="question">How many times?</div><div class="answer">{{this.general_questions.fainting_falling.times}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.fainting_falling.causes}}
+        <div class="wrapper">
+            <div class="question">What caused the falls?</div><div class="answer">{{this.general_questions.fainting_falling.causes}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.fainting_falling.sustained_injuries}}
+        <div class="wrapper">
+            <div class="question">Did you sustain any injuries?</div><div class="answer">{{this.general_questions.fainting_falling.sustained_injuries}}</div>
+        </div>
+    {{/if}}
+
+    {{#if this.general_questions.fainting_falling.aaaaaaaaaa}}
+        <div class="wrapper-sub">
+            <div class="question">Explain:</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
+        </div>
+    {{/if}}
+
+    
 
 
 {{/each}}
 
     <div class="wrapper">
-        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
     </div>
 
     <div class="wrapper-sub">
-        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
+        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
     </div>
 
-    {{#if this.general_questions.fainting_falling.aaaaaaaaaa}}
-        <div class="wrapper-sub">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
+    {{#if this.general_questions.claim_benefits.aaaaaaaaaa}}
+        <div class="wrapper">
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
 
-    {{#if this.general_questions.fainting_falling.aaaaaaaaaa}}
-        <div class="wrapper">
-            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.fainting_falling.aaaaaaaaaa}}</div>
+    {{#if this.general_questions.claim_benefits.aaaaaaaaaa}}
+        <div class="wrapper-sub">
+            <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.general_questions.claim_benefits.aaaaaaaaaa}}</div>
         </div>
     {{/if}}
+
+    
 
     
