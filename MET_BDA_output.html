@@ -22,6 +22,7 @@
         font-weight: bold;
     }
 </style>
+
 {{#each rows}}
 
 
@@ -494,9 +495,30 @@
     <!-- Routinely Suffered Pains -->
 
     <div class="wrapper">
-        <div class="question">Do you routinely have pain? <i>(If Yes, provide details for each area of pain below)</i></div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
+        <div class="question">Do you routinely have pain? <i>(If Yes, provide details for each area of pain below)</i></div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.has_pain_routinely}}</div>
     </div>
 
+    <div class="wrapper">
+        <div class="question">******THIS SECTION IS NOT FINISHED******</div><div class="answer"></div>
+    </div>
+
+<script>
+Handlebars.registerHelper('each', function(context, options) {
+    // must put the answers into an array so I can iterate/print it out here
+    // unless each can iterate a hash in order (seems you can --> http://stackoverflow.com/questions/280713/elements-order-in-a-for-in-loop)
+    // for (var item in items) {}
+
+    for (var q in context) {
+
+    }
+});
+</script>
+
+{{#each self_reported_pain.routinely_suffered_pains}}
+    <div class="wrapper-sub">
+        <div class="question">qqqqqqqqqqqq</div><div class="answer">{{this.self_reported_pain.routinely_suffered_pains.aaaaaaaaaa}}</div>
+    </div>
+{{/each}}
     
 
 
